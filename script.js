@@ -10,14 +10,8 @@ for (let i = 1; i <= 16; i++) {
     gridItem = document.createElement("div");
     gridItem.className = "grid-item hovered";
     gridRow.appendChild(gridItem);
-
-    /* Event listener is being added to every item but
-     * function is only added to last item.
-     */
-    gridItem.addEventListener("mouseover", () => {
-      gridItem.classList.toggle("hovered");
+    gridItem.addEventListener("mouseover", (e) => {
+      e.path[0].classList.toggle("hovered");
     });
   }
 }
-
-console.log(gridItem.classList);
