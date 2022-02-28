@@ -5,7 +5,10 @@ let clearGridBtn = document.querySelector(".clear-grid");
 let dimension;
 
 clearGridBtn.addEventListener("click", () => {
-  window.location.reload();
+  let item = document.querySelectorAll(".hovered");
+  item.forEach((e) => {
+    e.classList.remove("hovered");
+  });
 });
 
 do {
@@ -20,7 +23,7 @@ for (let i = 1; i <= dimension; i++) {
   gridContainer.appendChild(gridRow);
   for (let x = 1; x <= dimension; x++) {
     gridItem = document.createElement("div");
-    gridItem.className = "grid-item hovered";
+    gridItem.className = "grid-item";
     gridRow.appendChild(gridItem);
     gridItem.addEventListener("mouseover", (e) => {
       e.path[0].classList.toggle("hovered");

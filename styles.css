@@ -24,11 +24,11 @@
 .grid-item {
   width: 100%;
 
-  background: #000;
+  background: aqua;
 }
 
 .hovered {
-  background: aqua;
+  background: black;
 }
 
 .clear-grid {
