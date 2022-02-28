@@ -1,9 +1,10 @@
 let gridContainer = document.querySelector(".grid-container");
+let clearGridBtn = document.querySelector(".clear-grid");
 let gridRow;
 let gridItem;
-let clearGridBtn = document.querySelector(".clear-grid");
 let dimension;
 
+// On click event, remove 'hovered' class
 clearGridBtn.addEventListener("click", () => {
   let item = document.querySelectorAll(".hovered");
   item.forEach((e) => {
@@ -11,12 +12,14 @@ clearGridBtn.addEventListener("click", () => {
   });
 });
 
+// prompt user for grid dimension
 do {
   dimension = parseInt(
     prompt("Enter number of squares per side. Max number = 100.")
   );
 } while (dimension < 0 || dimension > 100 || isNaN(dimension));
 
+// create grid and append grid items
 for (let i = 1; i <= dimension; i++) {
   gridRow = document.createElement("div");
   gridRow.className = "grid-row";
