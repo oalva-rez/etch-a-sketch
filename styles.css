@@ -1,23 +1,41 @@
-.grid-container {
-  background-color: antiquewhite;
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #9bbfc0;
+  height: 100vh;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  height: 960px;
+  border: solid 2px black;
 }
 
 .grid-row {
   background: green;
   display: flex;
+  width: 960px;
+  height: 100%;
 }
 
 .grid-item {
-  width: 20px;
-  height: 20px;
+  width: 100%;
+
   background: #000;
-  border: solid 1px white;
 }
 
 .hovered {
   background: aqua;
+}
+
+.clear-grid {
+  cursor: pointer;
+  background-color: rgb(139, 139, 212);
+  border-radius: 10px;
+  border: solid grey 2px;
+  font-size: 50px;
+  margin-top: 15px;
 }
